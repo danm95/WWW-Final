@@ -1,0 +1,49 @@
+html {
+	height: 100%;
+}
+
+body{
+	background: url(https://i.pinimg.com/originals/3e/af/44/3eaf44629358e2f7efd35f8501f77e8d.jpg);
+	background-size: cover;
+	background-position: center;
+	color: white;
+}
+
+.video{
+	text-align: center;
+	padding-top: 5%;
+}	
+
+.overview{
+	text-align: center;
+	padding-top: 25%;
+}
+
+.information{
+	text-align: center;
+}	
+
+h1{
+	font-weight: 700;
+	font-size: 5em;
+}
+
+hr{
+	width: 400px;
+}
+
+.displayinline{
+	display: inline-block;
+}
+
+#safety{
+	padding-top: 3%;
+	color: rgb(187,0,0);
+	font-size: 5em;
+}
+
+#waitTime{
+	padding-top: 3%;
+	color: rgb(187,0,0);
+	font-size: 5em;
+}
