@@ -29,3 +29,15 @@ hr{
 	background-position:center;
     background: rgba(200, 54, 54, 0.5); 
 }
+
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.thumbnail {
+  height: 100%;
+}
+
+.caption{
+	background-color:transparent;
+}

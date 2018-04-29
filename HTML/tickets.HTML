@@ -41,8 +41,8 @@
 			</div>
 			
 			<p>
-			You can purchase tickets to BuckeyeLand here! With affordable prices for children, adults and seniors, you anyone can have
-			a great time at BuckeyeLand without breaking the bank.
+			You can purchase tickets to Buckeye Land here! With affordable prices for children, adults and seniors, anyone can have
+			a great time at Buckeye Land without breaking the bank.
 			</p>
 
 			<p>		
@@ -51,7 +51,7 @@
 			<label for="adultTickets">Adult tickets ($39.95):</label>
 			<div class="row">
 				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
-					<select class="form-control" id="adultTickets">
+					<select class="form-control" id="adultTickets" onchange="getTickets()">
 						<option>0</option>
 						<option>1</option>
 						<option>2</option>
@@ -71,7 +71,7 @@
 			<label for="childTickets">Children's tickets ($29.95):</label>
 			<div class="row">
 				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
-					<select class="form-control" id="childTickets">
+					<select class="form-control" id="childTickets" onchange="getTickets()">
 						<option>0</option>
 						<option>1</option>
 						<option>2</option>
@@ -91,7 +91,7 @@
 			<label for="seniorTickets">Senior tickets ($24.95):</label>
 			<div class="row">
 				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
-					<select class="form-control" id="seniorTickets">
+					<select class="form-control" id="seniorTickets" onchange="getTickets()">
 						<option>0</option>
 						<option>1</option>
 						<option>2</option>
@@ -106,13 +106,95 @@
 			</div>
 			</p>
 						
-			<p>
-			Total price:
+			<p id="totalPrice">
+			Total price: 
 			</p>
 			
+			<p>
+			<button type="button" class="btn" id="btnPurchase" onclick="purchaseTickets()">Purchase</button>
+			</p>
 			
-			
-			
+			<div id="thankYouDiv" class="hidden">
+				<p id="thankYou">
+					<p>Thank you for your purchase! You have received:</p>
+					</br>								
+						<div class="hidden container" id="hideAdultTickets">
+							<div class="row">
+									<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+										<p class="text-right">Adult tickets</p>
+									</div>
+									
+									<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+										<p class="text-right" id="adultTicketsPurchased"></p>
+									</div>
+									
+									
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+										<p id="adultTicketsPrice"> </p>
+									</div>
+								</div>
+						</div>		
+
+						<div class="hidden container" id="hideChildTickets">
+							<div class="row">
+									<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+										<p class="text-right">Child tickets</p>
+									</div>
+									
+									<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+										<p class="text-right" id="childTicketsPurchased"></p>
+									</div>
+									
+									
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+										<p id="childTicketsPrice"> </p>
+									</div>
+							</div>
+						</div>
+
+						<div class="hidden container" id="hideSeniorTickets">
+							<div class="row">
+									<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+										<p class="text-right">Senior tickets</p>
+									</div>
+									
+									<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+										<p class="text-right" id="seniorTicketsPurchased"></p>
+									</div>
+																
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+										<p id="seniorTicketsPrice"> </p>
+									</div>
+							</div>
+						</div>	
+						
+						<div class="hidden container" id="hideTotalPrice">
+							<div class="row">
+								<div class="col-lg-8 col-md-8 col-sm-10 col-xs-12">
+									<hr>
+								</div>
+							</div>
+							
+							<div class="row">
+									<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+										<p class="text-right">Total price: </p>
+									</div>
+											
+									<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+										<p class="text-right" </p>
+									</div>
+											
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+										<p id="totalPurchasedPrice"> </p>
+									</div>
+							</div>
+						</div>								
+			</div>
+					
+							
+							
+				</p>
+			</div>
 			
 			
 		</div>
@@ -125,5 +207,7 @@
   crossorigin="anonymous"></script> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<script src="..\scripts\tickets.js">
+</script>
 
 </html>
